@@ -36,6 +36,11 @@ switch ($_SESSION['page']) {
         header('Location: ../questions/question10.php');
         exit();
     case 11:
+        require_once '../database/db.php';
+        $stmt = $conn->prepare("INSERT INTO users (name, score) VALUES (:name, :score)");
+        $stmt->bindParam(':name', $_SESSION['name']);
+        $stmt->bindParam(':score', $_SESSION['score']);
+        $stmt->execute();
         header('Location: ../end.php');
         exit();
     default:

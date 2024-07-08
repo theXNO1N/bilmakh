@@ -22,7 +22,7 @@ $content = <<<CONTENT
             <p class="lead mb-4 text-white-50">تست MMPI یکی از معروف‌ترین تست‌های شخصیت‌شناسی است. این تست به شما کمک می‌کند تا پروفایل کامل شخصیت خود را همراه با تفسیر دقیق شاخص‌های اعتباری و بالینی دریافت کنید. تعداد سوالات این تست 10 سوال است.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="$action" type="button" class="btn $color_btn btn-lg px-4 gap-3">$text_btn</a>
-                <a type="button" class="btn btn-outline-secondary btn-lg px-4">بقیه کاربران</a>
+                <a type="button" class="btn btn-outline-secondary btn-lg px-4">لیست کاربران</a>
             </div>
         </div>
     </div>
