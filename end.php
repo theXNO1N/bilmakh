@@ -15,6 +15,9 @@ $content = <<<CONTENT
 <div>
     <h5>نام: <span>$name</span></h5>
     <h5>امتیاز: <span>$score</span></h5>
+    <form action="logic/restart.php" method="post">
+        <button class="btn btn-danger" type="submit">شروع دوباره</button>
+    </form>
 </div>
 </section>
 CONTENT;
