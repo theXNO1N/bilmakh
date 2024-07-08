@@ -1,14 +1,19 @@
 <?php
 session_start();
-$_SESSION['score'] += $_POST['score'];
 $name = $_SESSION['name'];
 $score = $_SESSION['score'];
+if (isset($_POST['score'])) {
+    $_SESSION['score'] += $_POST['score'];
+    $_SESSION['page'] = 10;
+}else {
+    header('Location: ../logic/switcher.php');
+}
 $num1 = rand(0,1);
 $num2 = rand(0,1);
 $title ='سوال ده';
 $content = <<<CONTENT
 <section class="bg-body-tertiary vh-100 d-flex align-items-center justify-content-center">
-<form action="end.php" method="POST" dir="rtl">
+<form action="../end.php" method="POST" dir="rtl">
 <div>
     <h5>نام: <span>$name</span></h5>
     <h5>امتیاز: <span>$score</span></h5>
@@ -23,5 +28,5 @@ $content = <<<CONTENT
 </form>
 </section>
 CONTENT;
-include_once 'layouts/master.php';
+include_once '../layouts/master.php';
 ?>

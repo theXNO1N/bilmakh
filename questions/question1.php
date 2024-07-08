@@ -2,6 +2,13 @@
 session_start();
 $name = $_SESSION['name'];
 $score = $_SESSION['score'];
+if (isset($_SESSION['page'])) {
+    if ($_SESSION['page'] != 1) {
+        header('Location: ../logic/switcher.php');
+    }
+}else {
+    header('Location: ../index.php');
+}
 $num1 = rand(0,1);
 $num2 = rand(0,1);
 $title ='سوال یک';
@@ -22,5 +29,5 @@ $content = <<<CONTENT
 </form>
 </section>
 CONTENT;
-include_once 'layouts/master.php';
+include_once '../layouts/master.php';
 ?>
