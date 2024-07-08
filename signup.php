@@ -2,7 +2,7 @@
 $title ='شروع';
 $content = <<<CONTENT
 <section id="start" class="vh-100 d-flex align-items-center justify-content-center">
-<form action="logic/start.php" method="POST">
+<form action="logic/start.php" method="post">
     <img class="mb-4" src="" alt="" width="72">
     <div class="form-floating">
       <input name="name" type="text" class="form-control" id="text" placeholder="فارسی بنویس" required>

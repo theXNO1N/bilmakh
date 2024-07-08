@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (isset($_POST['score'])){
+    $_SESSION['score'] += $_POST['score'];
+    $_SESSION['page'] += 1;
+}
 switch ($_SESSION['page']) {
     case 1:
         header('Location: ../questions/question1.php');

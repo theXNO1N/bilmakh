@@ -14,7 +14,7 @@ $num2 = rand(0,1);
 $title ='سوال یک';
 $content = <<<CONTENT
 <section class="bg-body-tertiary vh-100 d-flex align-items-center justify-content-center">
-<form action="question2.php" method="POST" dir="rtl">
+<form action="../logic/switcher.php" method="POST" dir="rtl">
 <div>
     <h5>نام: <span>$name</span></h5>
     <h5>امتیاز: <span>$score</span></h5>

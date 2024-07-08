@@ -2,11 +2,12 @@
 session_start();
 $name = $_SESSION['name'];
 $score = $_SESSION['score'];
-if (isset($_POST['score'])) {
-    $_SESSION['score'] += $_POST['score'];
-    $_SESSION['page'] = 11;
+if (isset($_SESSION['page'])) {
+    if ($_SESSION['page'] != 11) {
+        header('Location: ../logic/switcher.php');
+    }
 }else {
-    header('Location: ../logic/switcher.php');
+    header('Location: ../index.php');
 }
 $title ='پایان تست';
 $content = <<<CONTENT
