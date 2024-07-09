@@ -41,6 +41,8 @@ switch ($_SESSION['page']) {
         $stmt->bindParam(':name', $_SESSION['name']);
         $stmt->bindParam(':score', $_SESSION['score']);
         $stmt->execute();
+        $_SESSION['page'] += 1;
+    case 12:
         header('Location: ../end.php');
         exit();
     default:

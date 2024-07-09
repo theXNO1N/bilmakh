@@ -1,12 +1,15 @@
 #main {
-    background-image: url("https://pikfree.ir/wp-content/uploads/edd/2022/05/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration-Top-472x267.jpg");
+    background-image: url("../img/bg-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
-#start {
-    background-image: url("https://mockupworld.ir/wp-content/uploads/2019/05/Gif-Animated-Exude-017.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@media screen and (min-width: 768px){
+    #main {
+        background-image: url("../img/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
